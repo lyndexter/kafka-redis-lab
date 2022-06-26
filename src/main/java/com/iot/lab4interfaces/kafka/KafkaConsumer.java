@@ -8,11 +8,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class KafkaConsumer {
-    private static final Logger logger =
-            LoggerFactory.getLogger(App.class);
+  private static final Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
 
-    @KafkaListener(topics = "${kafka.topic_name}", groupId = "${kafka.group_id}")
-    public void listener(String message) {
-        logger.info("Received message = {}", message);
-    }
+  @KafkaListener(topics = "${kafka.topic_name}", groupId = "${spring.kafka.consumer.group-id}")
+  public void listener(String message) {
+    logger.info("Received message = {}", message);
+  }
 }
