@@ -1,6 +1,5 @@
 package com.iot.lab4interfaces.kafka;
 
-import com.iot.lab4interfaces.App;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
